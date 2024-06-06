@@ -5,6 +5,7 @@ data "spacelift_space_by_path" "intermediate-repo" {
 output "space_id" {
   value = data.spacelift_space_by_path.intermediate-repo.id
 }
+
 resource "spacelift_stack" "infra" {
   branch       = "main"
   name         = "Infrastructure stack"
@@ -31,3 +32,4 @@ resource "spacelift_stack_dependency_reference" "reference" {
   output_name         = "DB_CONNECTION_STRING"
   input_name          = "TF_VAR_APP_DB_URL"
 }
+

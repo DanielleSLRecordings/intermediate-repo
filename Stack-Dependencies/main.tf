@@ -14,6 +14,7 @@ resource "spacelift_stack" "infra" {
   project_root = "Stack-Dependencies/Infra"
 }
 
+
 resource "spacelift_stack" "app" {
   branch       = "main"
   name         = "Application stack"

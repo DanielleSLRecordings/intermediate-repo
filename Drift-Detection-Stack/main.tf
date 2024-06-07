@@ -17,6 +17,7 @@ resource "spacelift_stack" "drift_detection_example" {
   worker_pool_id    = var.worker_pool_id
 }
 
+
 resource "spacelift_stack_destructor" "drift_detection_example" {
   stack_id = spacelift_stack.drift_detection_example.id
 }
